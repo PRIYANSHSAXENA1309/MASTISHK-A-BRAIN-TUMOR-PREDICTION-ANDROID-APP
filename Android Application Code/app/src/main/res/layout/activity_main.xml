@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/main_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Head"
+            android:text="@string/Heading"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold|italic"
+            android:textSize="30sp"
+            android:layout_marginTop="18sp"
+            android:textColor="@color/Head"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="250sp"
+            android:layout_height="270sp"
+            android:layout_below="@id/Head"
+            android:layout_marginTop="50sp"
+            android:layout_marginStart="75sp"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="30dp"
+            app:cardUseCompatPadding="true"
+            android:id="@+id/cardView">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logo"
+                android:id="@+id/img_brain"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="300sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtinfo"
+            android:text="@string/dispText"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/cardView"
+            android:layout_marginTop="50sp"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_select"
+            android:text="@string/select"
+            android:layout_below="@id/txtinfo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50sp"
+            android:textSize="18sp"
+            android:backgroundTint="@color/button"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_predict"
+            android:text="@string/predict"
+            android:layout_below="@id/btn_select"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35sp"
+            android:textSize="18sp"
+            android:backgroundTint="@color/button"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_output"
+            android:layout_below="@id/btn_predict"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:layout_marginTop="30sp"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/overlay"
+        android:visibility="gone"
+        android:background="@color/Frame">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="350sp"
+            android:layout_height="300sp"
+            android:id="@+id/anim2"
+            app:lottie_rawRes="@raw/anim_predict"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="false"
+            android:layout_gravity="center"/>
+
+    </FrameLayout>
+
+</FrameLayout>

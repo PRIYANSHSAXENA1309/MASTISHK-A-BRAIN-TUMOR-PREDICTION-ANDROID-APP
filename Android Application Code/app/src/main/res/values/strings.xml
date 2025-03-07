@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Mastishk</string>
+    <string name="select">Select the Brain Image</string>
+    <string name="predict">Predict the Output</string>
+    <string name="dispText">Please select the appropriate brain image to predict the Tumor</string>
+    <string name="Heading">Brain Tumor Prediction</string>
+</resources>
